@@ -1,0 +1,10 @@
+name = "pips-worker"
+main = "src/index.ts"
+compatibility_date = "2022-09-17"
+account_id = "7d28861bbc8a091067e95946971bbaba"
+workers_dev = true
+
+[[r2_buckets]]
+binding = 'DECKS_BUCKET' # <~ valid JavaScript variable name
+bucket_name = 'decks'
+
