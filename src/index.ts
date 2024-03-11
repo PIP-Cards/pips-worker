@@ -40,7 +40,7 @@ export default {
     }
 
     switch (request.method) {
-      case 'GET':
+      case 'GET': {
         const object = await env.DECKS_BUCKET.get(key);
 
         if (object === null) return new Response('Object Not Found', { status: 404 });
@@ -53,6 +53,7 @@ export default {
         return new Response(object.body, {
           headers,
         });
+      }
 
       default:
         return new Response('Method Not Allowed', {
